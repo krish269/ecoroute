@@ -1,3 +1,6 @@
+# Kiro AI IDE internals — not part of the project
+.kiro/
+
 # Python
 __pycache__/
 *.py[cod]
