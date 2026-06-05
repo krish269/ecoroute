@@ -6,16 +6,6 @@ import { getMe, getSubmissions, getImpact } from "@/lib/api";
 import { Leaf, Coins, Weight, Wind, CheckCircle, Clock, AlertCircle, Wallet, RefreshCw } from "lucide-react";
 import Cookies from "js-cookie";
 
-declare global {
-  interface Window {
-    ethereum?: {
-      request: (args: { method: string; params?: any[] }) => Promise<any>;
-      on: (event: string, handler: (...args: any[]) => void) => void;
-      removeListener: (event: string, handler: (...args: any[]) => void) => void;
-    };
-  }
-}
-
 interface Submission {
   id: string;
   category: string;

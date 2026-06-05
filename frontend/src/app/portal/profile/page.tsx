@@ -5,18 +5,6 @@ import { Navbar } from "@/components/Navbar";
 import { getMe, updateWallet } from "@/lib/api";
 import { Wallet, Save, Plug, CheckCircle, AlertCircle, ExternalLink } from "lucide-react";
 
-// Extend Window to include ethereum injected by MetaMask / browser wallets
-declare global {
-  interface Window {
-    ethereum?: {
-      request: (args: { method: string; params?: any[] }) => Promise<any>;
-      on: (event: string, handler: (...args: any[]) => void) => void;
-      removeListener: (event: string, handler: (...args: any[]) => void) => void;
-      isMetaMask?: boolean;
-    };
-  }
-}
-
 type WalletStatus = "idle" | "connecting" | "connected" | "error";
 
 export default function ProfilePage() {
