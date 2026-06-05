@@ -7,12 +7,13 @@ import { Upload, CheckCircle, XCircle, AlertTriangle, Leaf } from "lucide-react"
 import { useEffect } from "react";
 
 type ResultState = {
-  result: "validated" | "rejected" | "uncertain";
+  result: "validated" | "rejected" | "uncertain" | "duplicate";
   category: string;
   confidence_score: number;
   tokens_awarded?: number;
   message?: string;
   submission_id?: string;
+  original_submission_id?: string;
 } | null;
 
 export default function SubmitPage() {
@@ -78,6 +79,11 @@ export default function SubmitPage() {
       icon: <AlertTriangle className="text-yellow-500" size={36} />,
       title: "Photo Unclear",
       bg: "bg-yellow-50 border-yellow-200",
+    },
+    duplicate: {
+      icon: <XCircle className="text-orange-500" size={36} />,
+      title: "Duplicate Image Detected",
+      bg: "bg-orange-50 border-orange-200",
     },
   };
 

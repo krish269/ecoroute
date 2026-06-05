@@ -72,6 +72,7 @@ class SegregationSubmission(Base):
     reward_status = Column(Enum(RewardStatus), default=RewardStatus.pending)
     tx_hash = Column(String, nullable=True)
     image_filename = Column(String, nullable=True)
+    image_hash = Column(String, nullable=True, index=True)  # perceptual hash for duplicate detection
     created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
 
     resident = relationship("User", back_populates="submissions")
