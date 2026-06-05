@@ -1,9 +1,5 @@
 {
   "framework": "nextjs",
   "buildCommand": "npm run build",
-  "outputDirectory": ".next",
-  "env": {
-    "NEXT_PUBLIC_API_URL": "@ecoroute_api_url",
-    "NEXT_PUBLIC_CONTRACT_ADDRESS": "@ecoroute_contract_address"
-  }
+  "outputDirectory": ".next"
 }
