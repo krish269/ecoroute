@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# Database — do NOT commit the SQLite file
+backend/ecoroute.db
+
+# Environment secrets — NEVER commit these
+.env
+backend/.env
+frontend/.env.local
+contracts/.env
+
+# Node
+node_modules/
+.next/
+frontend/.next/
+frontend/out/
+
+# Hardhat
+contracts/artifacts/
+contracts/cache/
+contracts/typechain-types/
+
+# OS
+.DS_Store
+Thumbs.db
